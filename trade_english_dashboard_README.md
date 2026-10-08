@@ -1,1087 +1,1066 @@
-# 무역영어 학습 대시보드
+# 🕵️ TRADE DOCUMENT DETECTIVE
+### 무역서류 탐정 — 서류 속 오류를 찾아라!
+
+---
 
 ## 1. 프로젝트 개요
 
 ### 프로젝트명
-**Trade English Dashboard**
+**TRADE DOCUMENT DETECTIVE**
 
 ### 한 줄 소개
-> 무역영어를 단순 암기하는 것이 아니라, 실제 무역서류를 읽고 퀴즈를 풀면서 실무형 무역영어를 익히는 학습 대시보드
+> "완벽해 보이는 무역서류, 하지만 어딘가 수상하다."
 
-### 프로젝트 목표
+무역거래에서 사용되는 다양한 서류를 비교하고,
+서류 간 불일치와 오류를 찾아내는 **게임형 무역 실무 학습 대시보드**이다.
 
-무역영어에 익숙하지 않은 학습자가 다음 능력을 단계적으로 키울 수 있도록 한다.
+단순히 무역용어를 암기하는 방식이 아니라,
 
-- 무역영어 핵심 용어 이해
-- 실제 무역문서에 등장하는 영어 표현 익숙해지기
-- Commercial Invoice, Packing List, B/L, L/C 등의 문서 구조 이해
-- 무역서류의 주요 항목을 영어로 읽고 의미 파악
-- 매일 퀴즈를 통한 반복 학습
-- 틀린 문제를 자동으로 관리하여 취약 영역 보완
-- 학습 결과와 성장 정도를 한눈에 확인
+**실제 무역서류 확인 → 오류 발견 → 정답 확인 → 왜 틀렸는지 학습**
+
+의 과정을 통해 무역 실무 감각을 익히는 것을 목표로 한다.
 
 ---
 
-## 2. 핵심 컨셉
+# 2. 프로젝트 목표
 
-### 핵심 차별점
+## 핵심 목표
 
-일반적인 영어 단어 암기 서비스가 아니라,
-
-**실제 무역서류 → 영어 항목 확인 → 의미 학습 → 관련 표현 학습 → 퀴즈**
-
-의 흐름으로 학습한다.
-
-예시:
-
-`B/L 문서 보기`
-
-→ `Consignee 클릭`
-
-→ `수하인 / 화물을 인도받는 당사자`
-
-→ 관련 무역영어 표현 학습
-
-→ 미니 퀴즈
-
-→ 오답이면 오답노트에 자동 저장
+1. 무역 초보자가 무역서류에 익숙해질 수 있도록 한다.
+2. 실제 해외영업/무역업무에서 필요한 서류 확인 능력을 학습한다.
+3. 여러 서류를 비교하면서 자연스럽게 무역용어를 익히도록 한다.
+4. 게임 요소를 활용해 반복 학습이 지루하지 않도록 한다.
+5. 사용자의 오답과 취약 개념을 기록하여 개인별 학습이 가능하도록 한다.
 
 ---
 
 # 3. 주요 사용자
 
-## Target User
+### 👩‍💼 해외영업/무역 직무 취업준비생
+무역서류를 처음 접하거나 실무 감각을 익히고 싶은 사용자
 
-- 무역영어를 처음 공부하는 취준생
-- 해외영업 / 구매 직무를 준비하는 사람
-- 무역 관련 전공자
-- 실제 무역서류가 낯선 학습자
-- 무역영어 자격시험을 준비하는 학습자
+### 📚 무역영어 학습자
+B/L, Invoice, Packing List, Incoterms 등의 개념을 공부하는 사용자
 
-특히 **해외영업 및 구매 직무 취업 준비생**을 주요 사용자로 설정한다.
-
----
-
-# 4. 전체 메뉴 구조
-
-```text
-HOME
- ├─ 오늘의 학습
- ├─ 오늘의 퀴즈
- ├─ 오늘의 무역서류
- ├─ 학습 연속 기록
- └─ 최근 오답
-
-TRADE ENGLISH
- ├─ 무역용어
- ├─ 무역영어 문장
- └─ 실무 표현
-
-DOCUMENT LIBRARY
- ├─ Commercial Invoice
- ├─ Packing List
- ├─ Bill of Lading
- ├─ Air Waybill
- ├─ Letter of Credit
- ├─ Insurance Policy
- └─ Certificate of Origin
-
-DAILY QUIZ
- ├─ 오늘의 퀴즈
- ├─ 용어 퀴즈
- ├─ 문장 퀴즈
- ├─ 서류 해석 퀴즈
- └─ 실무 상황 퀴즈
-
-WRONG ANSWERS
- ├─ 전체 오답
- ├─ 무역용어 오답
- ├─ B/L 오답
- ├─ L/C 오답
- └─ 취약 영역
-
-MY REPORT
- ├─ 전체 점수
- ├─ 학습량
- ├─ 분야별 실력
- ├─ 정답률
- └─ 성장 그래프
-```
+### 🧑‍💻 무역 초보자
+무역거래가 실제로 어떤 서류를 통해 진행되는지 경험해보고 싶은 사용자
 
 ---
 
-# 5. HOME
+# 4. 핵심 컨셉
 
-## 목적
+## 🔎 당신은 오늘부터 무역서류 탐정입니다.
 
-사용자가 대시보드에 접속했을 때 **오늘 무엇을 공부해야 하는지 바로 알 수 있도록 구성**한다.
-
-## 주요 UI
-
-### 오늘의 학습
-
-예시:
-
-```text
-TODAY'S STUDY
-
-오늘의 목표
-□ 무역용어 10개
-□ 무역영어 문장 5개
-□ 무역서류 1개
-□ 퀴즈 10문제
-
-진행률
-████████░░ 80%
-```
-
-### 오늘의 퀴즈
-
-```text
-TODAY QUIZ
-
-오늘의 퀴즈 10문제
-
-[ QUIZ START ]
-```
-
-### 오늘의 무역서류
+가상의 수출 거래가 하나 주어진다.
 
 예:
 
-```text
-TODAY'S DOCUMENT
+> 사건번호 #2026-014  
+> 🇰🇷 COSTD COSMETICS → 🇺🇸 ABC BEAUTY  
+> 화장품 10,000개 수출 사건
 
-Bill of Lading
+사용자는 거래에 관련된 여러 서류를 확인한다.
 
-오늘 배울 핵심 항목
-• Shipper
-• Consignee
-• Notify Party
-• Port of Loading
-• Port of Discharge
+### 확인 서류
 
-[ 문서 학습하기 ]
-```
+- Purchase Order
+- Commercial Invoice
+- Packing List
+- Bill of Lading
+- Certificate of Origin
 
-### 학습 연속 기록
-
-```text
-STREAK
-
-🔥 7 DAYS
-
-최근 7일 동안 매일 학습했습니다.
-```
-
-### 최근 오답
-
-최근 틀린 문제 3~5개를 보여준다.
+그리고 서류 안에 숨겨진 오류를 찾아야 한다.
 
 ---
 
-# 6. TRADE ENGLISH
+# 5. 메인 화면
 
-## 6-1. 무역용어
+## Header
 
-무역에서 자주 사용하는 단어를 카테고리별로 제공한다.
+왼쪽:
 
-### 카테고리 예시
+**🕵️ TRADE DOCUMENT DETECTIVE**
 
-- Shipping
-- Payment
-- Contract
-- Customs
-- Insurance
-- Documents
-- Incoterms
-- Logistics
+오른쪽:
 
-### 단어 카드
-
-```text
-CONSIGNEE
-
-수하인
-
-화물을 인도받는 사람 또는 회사
-
-Example
-The consignee is responsible for receiving the goods.
-
-[ 관련 문서 보기 ]
-[ 퀴즈 풀기 ]
-```
+- 🔥 연속 정답
+- ⭐ 현재 점수
+- 👤 탐정 LEVEL
 
 ---
 
-## 6-2. 무역영어 문장
+## Hero 영역
 
-실제 무역 이메일 및 서류에서 자주 볼 수 있는 문장을 학습한다.
+### "오늘의 사건"
+
+> **CASE #014**
+>
+> 미국 바이어가 주문한 화장품 10,000개.
+>
+> 모든 서류가 준비되었습니다.
+>
+> 그런데...
+>
+> **서류 하나에 이상한 점이 발견되었습니다.**
+
+큰 버튼:
+
+### 🔍 사건 수사 시작
+
+---
+
+## 오늘의 통계
+
+카드 형태:
+
+**오늘 해결한 사건**
+12건
+
+**정답률**
+87%
+
+**최장 콤보**
+8회
+
+**발견한 오류**
+31개
+
+---
+
+# 6. 사건 선택 화면
+
+사용자가 사건을 선택한다.
+
+### 🟢 EASY
+**신입 탐정**
+
+- 명백한 수량 오류
+- 금액 계산 오류
+- 국가명 오류
+
+### 🟡 NORMAL
+**주니어 탐정**
+
+- Invoice와 Packing List 비교
+- B/L 정보 비교
+- Incoterms 확인
+
+### 🔴 HARD
+**시니어 탐정**
+
+- 여러 서류에 걸친 오류
+- 선적일/계약일 불일치
+- Consignee / Notify Party 문제
+- 수량과 포장 단위 불일치
+
+### 🟣 MASTER
+**무역 베테랑**
+
+- 복수 오류
+- 미묘한 서류 불일치
+- 실무적인 위험요소 찾기
+
+---
+
+# 7. 핵심 기능 — 사건 수사
+
+## STEP 1. 사건 정보 확인
 
 예:
 
+### CASE #014
+
+**Seller**
+COSTD COSMETICS
+
+**Buyer**
+ABC BEAUTY INC.
+
+**Product**
+Hydrating Serum 30ml
+
+**Quantity**
+10,000 PCS
+
+**Trade Term**
+FOB BUSAN
+
+**Destination**
+Los Angeles, USA
+
+---
+
+# 8. STEP 2. 서류 열람
+
+화면 중앙에 서류 카드가 표시된다.
+
+탭:
+
+- 📄 Purchase Order
+- 📄 Commercial Invoice
+- 📦 Packing List
+- 🚢 B/L
+- 🌎 Certificate of Origin
+
+사용자는 각각의 서류를 클릭하여 확인할 수 있다.
+
+---
+
+# 9. 서류 디자인
+
+실제 문서처럼 보이되 너무 복잡하지 않게 구성한다.
+
+## Commercial Invoice 예시
+
 ```text
-Please find attached the Commercial Invoice.
+COMMERCIAL INVOICE
 
-첨부된 상업송장을 확인해 주세요.
+Invoice No. : CI-2026-014
+Date        : 2026-10-05
 
-관련 표현
-• attached
-• Commercial Invoice
-• please find attached
+Seller:
+COSTD COSMETICS
+Busan, Korea
+
+Buyer:
+ABC BEAUTY INC.
+Los Angeles, USA
+
+Product:
+Hydrating Serum 30ml
+
+Quantity:
+10,000 PCS
+
+Unit Price:
+USD 3.00
+
+Total Amount:
+USD 30,000
+
+Incoterms:
+FOB BUSAN
 ```
 
-문장마다 다음 정보를 제공한다.
+---
 
-- 영어 문장
-- 한국어 의미
-- 핵심 단어
-- 문장 구조
-- 실무에서 사용하는 상황
-- 관련 문서
-- 퀴즈
+# 10. 오류 찾기 기능
+
+사용자가 문서에서 의심되는 부분을 클릭한다.
+
+예:
+
+> Quantity: **10,000 PCS**
+
+사용자가 클릭하면
+
+### 🔍 이 부분이 수상하다고 생각하나요?
+
+버튼:
+
+- 🚨 오류 신고
+- ❌ 취소
+
+정답이라면:
+
+> 🎯 **오류 발견!**
 
 ---
 
-## 6-3. 실무 표현
+# 11. 오류 발견 결과
 
-해외영업에서 자주 사용할 수 있는 표현을 상황별로 제공한다.
+오류를 찾으면 애니메이션을 보여준다.
 
-### 예시 카테고리
+### 🎯 CASE SOLVED!
 
-- 견적 요청
-- 주문 확인
-- 선적 안내
-- 서류 전달
-- 결제 요청
-- 납기 안내
-- 클레임
-- 배송 지연
+> 당신은 **수량 불일치**를 발견했습니다.
+
+### Invoice
+
+10,000 PCS
+
+### Packing List
+
+9,500 PCS
 
 ---
 
-# 7. DOCUMENT LIBRARY
+### 💡 왜 문제일까요?
 
-이 프로젝트의 핵심 기능.
+Invoice와 Packing List의 수량이 일치하지 않습니다.
 
-실제 무역서류와 유사한 형태의 샘플 문서를 제공한다.
+실제 수출 과정에서 수량이 다르면
 
-## 지원 문서
+- 서류 검토 과정에서 문제가 발생할 수 있고
+- 통관 및 대금 결제 과정에서 추가 확인이 필요할 수 있습니다.
 
-### 1. Commercial Invoice
+---
 
-주요 항목:
+# 12. 탐정 점수 시스템
 
-- Seller / Exporter
-- Buyer / Importer
-- Invoice No.
-- Invoice Date
-- Description of Goods
+오류를 빨리 찾을수록 높은 점수를 준다.
+
+### 기본 점수
+
+오류 발견: +100점
+
+### 보너스
+
+빠른 발견: +50점
+
+힌트 없이 발견: +50점
+
+연속 정답: COMBO 적용
+
+---
+
+## Combo
+
+```text
+🔥 3 COMBO
+🔥 5 COMBO
+🔥 10 COMBO
+```
+
+10 COMBO 달성 시
+
+> 🏆 MASTER DETECTIVE
+
+칭호 획득
+
+---
+
+# 13. 힌트 시스템
+
+너무 어려운 문제는 힌트를 사용할 수 있다.
+
+### 💡 HINT 1
+
+> "같은 상품의 수량이 다른 서류에서도 동일한지 확인해보세요."
+
+### 💡 HINT 2
+
+> "Packing List를 확인해보세요."
+
+### 💡 HINT 3
+
+> "Quantity 항목을 비교해보세요."
+
+힌트를 사용할수록 획득 점수 감소.
+
+---
+
+# 14. 무역서류 종류
+
+초기 버전에서는 다음 5개 서류를 사용한다.
+
+## ① Purchase Order
+
+구매주문서
+
+주문 수량, 제품, 가격, 거래조건 등을 확인
+
+---
+
+## ② Commercial Invoice
+
+상업송장
+
+주요 확인 항목:
+
+- Seller
+- Buyer
+- Product
 - Quantity
 - Unit Price
 - Total Amount
 - Currency
-- Country of Origin
-- Terms of Delivery
+- Incoterms
 
-### 2. Packing List
+---
 
-주요 항목:
+## ③ Packing List
 
-- Shipper
-- Consignee
-- Description
-- Quantity
-- Net Weight
-- Gross Weight
+포장명세서
+
+주요 확인 항목:
+
 - Package
+- Quantity
+- Gross Weight
+- Net Weight
 - Dimensions
-- Shipping Marks
+- Product
 
-### 3. Bill of Lading
+---
 
-주요 항목:
+## ④ Bill of Lading
+
+선하증권
+
+주요 확인 항목:
 
 - Shipper
 - Consignee
 - Notify Party
 - Port of Loading
 - Port of Discharge
-- Place of Receipt
-- Place of Delivery
 - Vessel
-- Voyage No.
-- Description of Goods
+- On Board Date
+- Package
 - Gross Weight
-- Container No.
 
-### 4. Air Waybill
+---
 
-주요 항목:
+## ⑤ Certificate of Origin
 
-- Shipper
-- Consignee
-- Airport of Departure
-- Airport of Destination
-- Handling Information
-- Gross Weight
-- Chargeable Weight
+원산지증명서
 
-### 5. Letter of Credit
-
-주요 항목:
-
-- Applicant
-- Beneficiary
-- Issuing Bank
-- Advising Bank
-- Credit Amount
-- Expiry Date
-- Latest Date of Shipment
-- Port of Loading
-- Port of Discharge
-- Documents Required
-- Terms and Conditions
-
-### 6. Insurance Policy
-
-주요 항목:
-
-- Insured
-- Policy No.
-- Voyage
-- Description of Goods
-- Amount Insured
-- Coverage
-- Risk
-- Premium
-
-### 7. Certificate of Origin
-
-주요 항목:
+주요 확인 항목:
 
 - Exporter
 - Consignee
 - Country of Origin
-- Description of Goods
+- Product
+- HS Code
 - Quantity
-- Invoice No.
-- Certification
 
 ---
 
-# 8. 인터랙티브 문서 학습
+# 15. 오류 유형
 
-문서를 단순히 이미지로 보여주는 것이 아니라 **클릭하면서 학습할 수 있도록 구성**한다.
-
-## 예시
-
-B/L 화면에서:
-
-```text
-SHIPPER
-ABC COSMETICS CO., LTD.
-
-CONSIGNEE
-XYZ BEAUTY INC.
-
-NOTIFY PARTY
-XYZ BEAUTY INC.
-
-PORT OF LOADING
-BUSAN, KOREA
-
-PORT OF DISCHARGE
-LOS ANGELES, USA
-```
-
-사용자가 `CONSIGNEE`를 클릭하면:
-
-```text
-CONSIGNEE
-
-수하인
-
-화물을 인도받는 당사자
-
-쉽게 말하면:
-"누가 이 화물을 받는가?"
-
-관련 표현:
-• consignee
-• consignee's name
-• delivery to consignee
-
-관련 문서:
-B/L
-AWB
-
-[ 퀴즈 풀기 ]
-```
-
-## 학습 연결 구조
-
-```text
-문서 항목
-   ↓
-용어 설명
-   ↓
-실무 의미
-   ↓
-관련 표현
-   ↓
-관련 문서
-   ↓
-미니 퀴즈
-   ↓
-오답 저장
-```
-
----
-
-# 9. LETTER OF CREDIT 학습 화면
-
-L/C는 실제 무역영어 학습에서 중요하므로 별도의 학습 화면을 제공한다.
-
-## 화면 예시
-
-```text
-LETTER OF CREDIT
-
-Applicant
-ABC IMPORT CO., LTD.
-
-Beneficiary
-XYZ EXPORT CO., LTD.
-
-Amount
-USD 50,000
-
-Latest Date of Shipment
-2026-11-30
-
-Port of Loading
-BUSAN
-
-Port of Discharge
-LOS ANGELES
-
-Documents Required
-1. Commercial Invoice
-2. Packing List
-3. Bill of Lading
-4. Certificate of Origin
-5. Insurance Policy
-```
-
-각 항목을 클릭하면 설명을 보여준다.
-
-특히 `Documents Required`를 클릭하면 필요한 서류를 연결해서 보여준다.
-
-```text
-L/C
- ↓
-Documents Required
- ↓
-Commercial Invoice
-Packing List
-B/L
-C/O
-Insurance Policy
-```
-
-이렇게 구성하여 **L/C와 다른 무역서류의 관계**까지 학습할 수 있도록 한다.
-
----
-
-# 10. DAILY QUIZ
-
-매일 학습자가 짧게라도 공부할 수 있도록 5~10문제의 데일리 퀴즈를 제공한다.
-
-## 난이도
-
-### Level 1 — Vocabulary
-
-단어 뜻 맞히기
-
-```text
-What does "Consignee" mean?
-
-① 수출자
-② 수입자
-③ 수하인
-④ 운송인
-```
-
-### Level 2 — Sentence
-
-문장의 의미 파악
-
-### Level 3 — Document
-
-문서에서 특정 항목 찾기
-
-### Level 4 — Practical
-
-실제 무역 상황에서 적절한 용어 선택
-
-### Level 5 — Exam
-
-무역영어 시험과 유사한 문제
-
----
-
-# 11. 퀴즈 유형
-
-다양한 문제 유형을 사용한다.
-
-- 객관식
-- 빈칸 채우기
-- 영어 → 한국어
-- 한국어 → 영어
-- 문서 항목 찾기
-- 문서 해석
-- 상황에 맞는 용어 선택
-- 잘못된 설명 찾기
-
----
-
-# 12. WRONG ANSWERS
-
-틀린 문제는 자동으로 오답노트에 저장한다.
-
-## 오답 카드
-
-```text
-WRONG ANSWER
-
-Question
-What is the meaning of "Notify Party"?
-
-My Answer
-수하인
-
-Correct Answer
-도착통지처
-
-Category
-B/L
-
-[ 다시 풀기 ]
-[ 개념 학습 ]
-```
-
-## 취약 영역 분석
+## 🧮 숫자 오류
 
 예:
 
-```text
-MY WEAK POINTS
+Invoice
 
-B/L             72%
-L/C             48%
-Insurance       65%
-Invoice         84%
-Incoterms       57%
-```
+> Quantity: 10,000 PCS
 
-L/C가 가장 낮으면:
+Packing List
 
-> "L/C 관련 문제를 집중적으로 복습해 보세요."
-
-와 같은 추천을 제공한다.
+> Quantity: 9,500 PCS
 
 ---
 
-# 13. MY REPORT
-
-사용자의 학습 성과를 시각화한다.
-
-## 주요 지표
-
-- 전체 정답률
-- 총 학습 문제 수
-- 학습한 단어 수
-- 학습한 문서 수
-- 연속 학습일
-- 최근 7일 정답률
-- 최근 30일 성장률
-
-## 분야별 점수
+## 💰 금액 오류
 
 ```text
-TRADE ENGLISH SKILL
+Quantity: 10,000
+Unit Price: USD 3
 
-Vocabulary       85%
-B/L              72%
-L/C              61%
-Invoice          88%
-Packing List     79%
-Insurance        65%
-Incoterms        74%
-```
+Expected:
+USD 30,000
 
-## 성장 그래프
-
-최근 7일 또는 30일의 정답률 변화를 그래프로 보여준다.
-
----
-
-# 14. 오늘의 학습 알고리즘
-
-매일 다음 순서로 학습하도록 설계한다.
-
-```text
-1. 오늘의 단어 10개
-        ↓
-2. 오늘의 무역영어 문장 5개
-        ↓
-3. 오늘의 무역서류 1개
-        ↓
-4. 문서 핵심 항목 학습
-        ↓
-5. 오늘의 퀴즈 10문제
-        ↓
-6. 오답 자동 저장
-        ↓
-7. 학습 결과 기록
-```
-
-다음 날에는 전날 틀린 문제 중 일부를 다시 출제한다.
-
----
-
-# 15. 추천 학습 반복 시스템
-
-단순히 문제를 한 번 풀고 끝내지 않는다.
-
-```text
-새로운 단어
-   ↓
-1차 학습
-   ↓
-오늘의 퀴즈
-   ↓
-오답 저장
-   ↓
-다음 날 복습
-   ↓
-3일 후 복습
-   ↓
-7일 후 복습
-```
-
-이를 통해 반복적으로 틀리는 개념을 집중 학습한다.
-
----
-
-# 16. 데이터 구조
-
-Flask 기반으로 다음과 같은 구조를 권장한다.
-
-## User
-
-```text
-id
-name
-created_at
-study_streak
-total_score
-```
-
-## Vocabulary
-
-```text
-id
-term
-meaning
-category
-example_sentence
-related_document
-difficulty
-```
-
-## Document
-
-```text
-id
-document_type
-title
-description
-image_path
-difficulty
-```
-
-## DocumentField
-
-```text
-id
-document_id
-field_name
-korean_meaning
-explanation
-example
-related_terms
-```
-
-## Quiz
-
-```text
-id
-question
-question_type
-category
-difficulty
-answer
-explanation
-```
-
-## QuizResult
-
-```text
-id
-user_id
-quiz_id
-is_correct
-selected_answer
-answered_at
-```
-
-## WrongAnswer
-
-```text
-id
-user_id
-quiz_id
-wrong_count
-last_wrong_at
+Document:
+USD 32,000
 ```
 
 ---
 
-# 17. Flask 프로젝트 구조
+## 📦 포장 오류
+
+Invoice:
+
+> 100 CARTONS
+
+Packing List:
+
+> 120 CARTONS
+
+---
+
+## ⚖️ 중량 오류
+
+Packing List:
+
+> Gross Weight: 1,200 KG
+
+B/L:
+
+> Gross Weight: 1,500 KG
+
+---
+
+## 🌎 국가 오류
+
+Certificate of Origin:
+
+> Country of Origin: China
+
+다른 서류:
+
+> Country of Origin: Korea
+
+---
+
+## 🚢 선적항 오류
+
+Invoice:
+
+> FOB BUSAN
+
+B/L:
+
+> Port of Loading: INCHEON
+
+---
+
+## 👤 거래 당사자 오류
+
+Invoice:
+
+> Buyer: ABC BEAUTY INC.
+
+B/L:
+
+> Consignee: XYZ BEAUTY LTD.
+
+---
+
+## 📅 날짜 오류
+
+Purchase Order:
+
+> Order Date: 2026-10-01
+
+B/L:
+
+> On Board Date: 2026-09-28
+
+계약 및 거래 흐름상 이상 여부를 판단하도록 구성한다.
+
+---
+
+# 16. 오류 설명 기능
+
+정답을 맞힌 후 단순히
+
+> "정답입니다."
+
+라고 끝내지 않는다.
+
+반드시 **무역 공부에 도움이 되는 설명**을 제공한다.
+
+예:
+
+### 📚 LEARN
+
+**Notify Party란?**
+
+화물 도착 사실을 통지받는 당사자이다.
+
+### 🔗 함께 알아두면 좋은 개념
+
+`Consignee`
+
+`Shipper`
+
+`B/L`
+
+`Arrival Notice`
+
+버튼:
+
+### 📖 용어 자세히 보기
+
+---
+
+# 17. 무역용어 미니사전
+
+상단 메뉴:
+
+### 📚 TRADE DICTIONARY
+
+검색창:
+
+> "Notify Party를 검색해보세요."
+
+검색 결과:
+
+### Notify Party
+
+**뜻**
+화물 도착 통지를 받는 당사자
+
+**관련 서류**
+B/L
+
+**함께 공부하기**
+- Consignee
+- Shipper
+- Arrival Notice
+- Delivery Order
+
+---
+
+# 18. 나의 학습 데이터
+
+메뉴:
+
+### 📊 MY DETECTIVE REPORT
+
+사용자의 학습 데이터를 보여준다.
+
+---
+
+## 전체 정답률
+
+### 87%
+
+---
+
+## 분야별 능력
 
 ```text
-trade_english_dashboard/
-│
-├── app.py
-│
-├── config.py
-│
-├── requirements.txt
-│
-├── README.md
-│
-├── models/
-│   ├── user.py
-│   ├── vocabulary.py
-│   ├── document.py
-│   └── quiz.py
-│
-├── routes/
-│   ├── home.py
-│   ├── trade_english.py
-│   ├── documents.py
-│   ├── quiz.py
-│   ├── wrong_answers.py
-│   └── report.py
-│
-├── templates/
-│   ├── base.html
-│   ├── home.html
-│   ├── trade_english.html
-│   ├── documents.html
-│   ├── document_detail.html
-│   ├── quiz.html
-│   ├── wrong_answers.html
-│   └── report.html
-│
-├── static/
-│   ├── css/
-│   ├── js/
-│   ├── images/
-│   └── documents/
-│
-└── data/
-    ├── vocabulary.json
-    ├── documents.json
-    └── quizzes.json
+Invoice        █████████░ 90%
+
+Packing List   ████████░░ 80%
+
+B/L            ██████░░░░ 60%
+
+Incoterms      ███████░░░ 70%
+
+Trade Terms    ████████░░ 80%
 ```
 
 ---
 
-# 18. UI/UX 디자인 방향
+## 가장 많이 틀린 개념
+
+### 🚨 TOP 3
+
+1. Notify Party
+2. Incoterms
+3. Gross Weight
+
+버튼:
+
+### 🔄 약점 다시 풀기
+
+---
+
+# 19. 오답노트
+
+사용자가 틀린 문제는 자동으로 저장한다.
+
+### WRONG ANSWER NOTE
+
+**CASE #014**
+
+오답:
+
+> B/L의 Consignee를 선택
+
+정답:
+
+> Packing List의 Quantity
+
+---
+
+### 다시 공부하기
+
+> Invoice와 Packing List의 수량 비교
+
+버튼:
+
+**🔁 다시 도전**
+
+---
+
+# 20. 재미 요소
+
+## 탐정 등급
+
+학습량에 따라 등급이 올라간다.
+
+### LEVEL 1
+🕵️ 견습 탐정
+
+### LEVEL 2
+🔎 초급 탐정
+
+### LEVEL 3
+📄 서류 분석가
+
+### LEVEL 4
+🚢 무역 실무 탐정
+
+### LEVEL 5
+👑 TRADE MASTER
+
+---
+
+# 21. 사건 해결 애니메이션
+
+정답:
+
+```text
+🔍 분석 중...
+     ↓
+📄 서류 비교 중...
+     ↓
+⚠️ 이상 징후 발견
+     ↓
+🎯 ERROR FOUND!
+```
+
+정답 시:
+
+- 점수 상승 애니메이션
+- COMBO 표시
+- 작은 confetti 효과
+
+오답 시:
+
+> ❌ 아쉽습니다.
+
+하지만 바로 정답을 알려주지 않고
+
+> 💡 다시 한번 다른 서류와 비교해보세요.
+
+라는 방식으로 한 번 더 생각할 기회를 제공한다.
+
+---
+
+# 22. 추천 UI 디자인
 
 ## 전체 분위기
 
-- 깔끔하고 현대적인 대시보드
-- 학습 서비스이지만 너무 딱딱하지 않게 구성
-- 카드 기반 UI
-- 충분한 여백
-- 가독성 높은 폰트
-- 과도한 장식 최소화
+**깔끔한 SaaS형 대시보드 + 탐정 게임 느낌**
 
-## 색상
+너무 장난스럽거나 어린 느낌은 피한다.
 
-메인 컬러:
+### Color
 
+Main:
 - Light Sky Blue
 - Soft Blue
-- White
 
-포인트 컬러:
-
+Sub:
 - Pastel Yellow
-- Pastel Pink
 - Pastel Green
+- Soft Pink
 
-전체적으로 부드러운 그라데이션을 활용한다.
+Background:
+- 매우 밝은 회색 또는 화이트
 
-단, 너무 화려한 금융앱 느낌보다는 **취업 준비생이 오래 사용하기 편한 학습 대시보드**를 지향한다.
+Error:
+- Soft Red
+
+Success:
+- Soft Green
 
 ---
 
-# 19. HOME 화면 추천 레이아웃
+# 23. UI 구성
+
+### Sidebar
 
 ```text
-┌──────────────────────────────────────────────┐
-│ TRADE ENGLISH                    🔥 7 DAYS  │
-├──────────────────────────────────────────────┤
-│                                              │
-│  TODAY'S STUDY                               │
-│  ────────────────────────────────────────    │
-│  Vocabulary       10 / 10                    │
-│  Sentences         5 / 5                     │
-│  Document          1 / 1                     │
-│  Quiz              7 / 10                    │
-│                                              │
-│  ████████████████░░░░ 80%                    │
-│                                              │
-├──────────────────────┬───────────────────────┤
-│ TODAY'S DOCUMENT     │ TODAY'S QUIZ          │
-│                      │                       │
-│ Bill of Lading       │ 10 Questions         │
-│                      │                       │
-│ [Study Document]     │ [Start Quiz]          │
-├──────────────────────┴───────────────────────┤
-│                                              │
-│ RECENT WRONG ANSWERS                         │
-│ Consignee / Notify Party / Latest Shipment   │
-│                                              │
-└──────────────────────────────────────────────┘
+🕵️ TRADE DETECTIVE
+
+🏠 Dashboard
+
+🔍 Case Files
+
+📄 Documents
+
+📚 Trade Dictionary
+
+📊 My Report
+
+📝 Wrong Answers
 ```
 
 ---
 
-# 20. MVP 개발 우선순위
+# 24. 메인 대시보드 레이아웃
 
-처음부터 모든 기능을 구현하지 않고 다음 순서로 개발한다.
+상단:
 
-## STEP 1
+> "오늘도 서류 속 오류를 찾아보세요."
 
-기본 화면
+↓
 
-- Home
-- Trade English
-- Document Library
-- Daily Quiz
-- Wrong Answers
-- My Report
+4개의 통계 카드
 
-## STEP 2
+> 해결 사건 / 정답률 / Combo / 탐정 Level
 
-무역용어 데이터
+↓
 
-- 약 100~200개 용어
-- 카테고리
-- 영어
-- 한국어
-- 설명
-- 예문
+### 오늘의 사건
 
-## STEP 3
+큰 Case Card
 
-무역서류
+> 🇰🇷 → 🇺🇸  
+> COSTD COSMETICS  
+> VS  
+> ABC BEAUTY
 
-우선 다음 4개부터 구현한다.
+**[ 사건 수사 시작 ]**
 
-1. Commercial Invoice
-2. Packing List
-3. B/L
-4. L/C
+↓
 
-이후 확장:
+### 최근 오답
 
-5. AWB
-6. Insurance Policy
-7. Certificate of Origin
+최근 틀린 문제 3개
 
-## STEP 4
+↓
 
-퀴즈 시스템
+### 나의 취약 개념
 
-- 객관식
-- 정답 확인
-- 해설
-- 점수 계산
-- 오답 저장
-
-## STEP 5
-
-학습 기록
-
-- 학습일
-- 정답률
-- 오답 수
-- 연속 학습일
-- 분야별 점수
-
-## STEP 6
-
-인터랙티브 문서
-
-문서의 특정 영어 항목을 클릭하면 설명이 나타나도록 구현한다.
+막대그래프
 
 ---
 
-# 21. 향후 확장 기능
+# 25. 기술 스택
 
-MVP 이후 다음 기능을 추가할 수 있다.
+## Backend
 
-### AI 문서 설명
+**Flask**
 
-사용자가 문서의 특정 부분을 선택하면 AI가 쉽게 설명한다.
+## Frontend
 
-### AI 무역영어 튜터
+- HTML
+- CSS
+- JavaScript
 
-```text
-"Notify Party가 뭐예요?"
+## Chart
 
-→ 초보자 수준으로 설명
-→ 실제 B/L에서의 역할 설명
-→ 관련 용어 3개 추천
-→ 미니 퀴즈 출제
-```
+Chart.js 사용 가능
 
-### AI 문서 해석
+## 초기 데이터
 
-사용자가 업로드한 무역서류에서 주요 항목을 찾아 설명한다.
+JSON 또는 Python Dictionary를 활용하여 Mock Data 구성
 
-### 실무 시뮬레이션
-
-```text
-[상황]
-
-바이어가 선적서류를 요청했습니다.
-
-어떤 서류를 준비해야 할까요?
-
-① Commercial Invoice
-② Packing List
-③ B/L
-④ Certificate of Origin
-⑤ 모두 필요할 수 있음
-```
-
-### 직무별 학습
-
-- 해외영업
-- 구매
-- 수출입
-- 포워딩
-- 무역사무
-
-직무별로 자주 사용하는 표현과 문서를 다르게 제공한다.
+DB는 초기 버전에서는 필수가 아니며,
+추후 SQLite 또는 PostgreSQL로 확장할 수 있도록 구조를 분리한다.
 
 ---
 
-# 22. 프로젝트의 핵심 포인트
+# 26. 데이터 구조 예시
 
-이 프로젝트는 단순한 영어 단어 암기 앱이 아니다.
-
-## 핵심 학습 구조
-
-**영어 → 무역용어 → 무역서류 → 실무 상황**
-
-을 하나로 연결한다.
-
-예:
-
-```text
-Consignee
-     ↓
-수하인
-     ↓
-B/L
-     ↓
-실제 문서에서 위치 확인
-     ↓
-관련 문장 학습
-     ↓
-퀴즈
-     ↓
-오답 관리
+```python
+case = {
+    "id": "CASE-014",
+    "title": "미국 화장품 수출 사건",
+    "difficulty": "normal",
+    "seller": "COSTD COSMETICS",
+    "buyer": "ABC BEAUTY INC.",
+    "product": "Hydrating Serum 30ml",
+    "documents": [
+        "purchase_order",
+        "invoice",
+        "packing_list",
+        "bill_of_lading",
+        "certificate_of_origin"
+    ],
+    "errors": [
+        {
+            "type": "quantity_mismatch",
+            "document_a": "invoice",
+            "document_b": "packing_list",
+            "answer": "quantity",
+            "explanation": "Invoice와 Packing List의 수량이 일치하지 않습니다."
+        }
+    ]
+}
 ```
-
-따라서 사용자는 단어를 따로 외우는 것이 아니라 **실제 무역 업무의 맥락 속에서 영어를 익힐 수 있다.**
 
 ---
 
-# 23. 포트폴리오 관점의 차별점
+# 27. 첫 번째 MVP에서 반드시 구현할 기능
 
-이 프로젝트를 단순한 영어 학습 서비스가 아닌 **무역 직무 포트폴리오 프로젝트**로 보여주는 것이 중요하다.
+### MUST HAVE
 
-### 보여줄 수 있는 역량
+- [ ] 메인 대시보드
+- [ ] 사건 선택
+- [ ] 난이도 선택
+- [ ] 무역서류 표시
+- [ ] 서류 간 비교
+- [ ] 오류 클릭
+- [ ] 정답/오답 판정
+- [ ] 점수 시스템
+- [ ] 힌트
+- [ ] 오류 설명
+- [ ] 무역용어 미니사전
+- [ ] 오답 기록
+- [ ] 학습 통계
 
-- 무역 실무 이해
-- 무역서류 이해
-- 데이터 구조 설계
-- 사용자 중심 UX 설계
-- 학습 데이터 분석
-- 웹 서비스 개발
-- 해외영업/구매 직무 이해
+### NICE TO HAVE
 
-### 프로젝트 소개 문구
-
-> 무역영어에 어려움을 느끼는 취업 준비생을 위해 실제 무역서류 기반의 학습 경험을 제공하는 웹 대시보드입니다. 무역용어 암기부터 Commercial Invoice, B/L, L/C 등의 문서 학습, 데일리 퀴즈, 오답 분석까지 하나의 서비스에서 경험할 수 있도록 설계했습니다.
+- [ ] Combo
+- [ ] 탐정 Level
+- [ ] Badge
+- [ ] Confetti
+- [ ] 타이머
+- [ ] 오늘의 사건
+- [ ] 랜덤 사건
+- [ ] 다크모드
 
 ---
 
-# 24. 최종 사용자 경험
+# 28. 중요한 UX 원칙
 
-사용자가 매일 서비스를 방문하면 다음 경험을 하도록 한다.
+### ❌ 단순 암기 앱처럼 만들지 않는다.
 
-```text
-로그인
- ↓
-HOME
- ↓
-오늘의 학습 확인
- ↓
-오늘의 무역용어 학습
- ↓
-오늘의 무역서류 확인
- ↓
-문서의 주요 영어 항목 클릭
- ↓
-의미 및 실무 설명 확인
- ↓
-오늘의 퀴즈
- ↓
-틀린 문제 자동 저장
- ↓
-학습 결과 확인
- ↓
-다음 날 복습
-```
+### ❌ 단순 표 형태로 서류를 나열하지 않는다.
 
-최종적으로 사용자가 서비스를 꾸준히 사용할수록
+### ❌ 정답만 보여주고 끝내지 않는다.
 
-**"무역영어가 어렵다"**
+---
 
-에서
+### ✅ 반드시 다음 흐름으로 만든다.
 
-**"B/L이나 L/C를 보면 어떤 내용인지 대략 읽을 수 있다"**
+**사건 발생**
 
-로 성장하는 것을 목표로 한다.
+↓
+
+**서류 조사**
+
+↓
+
+**의심되는 부분 발견**
+
+↓
+
+**오류 신고**
+
+↓
+
+**정답 판정**
+
+↓
+
+**왜 오류인지 설명**
+
+↓
+
+**관련 무역용어 학습**
+
+↓
+
+**다음 사건**
+
+---
+
+# 29. 샘플 사건 3개
+
+## CASE 001 — 수량의 비밀
+
+난이도: EASY
+
+Invoice:
+
+> 10,000 PCS
+
+Packing List:
+
+> 9,500 PCS
+
+정답:
+
+> Quantity mismatch
+
+---
+
+## CASE 002 — 사라진 운송비
+
+난이도: NORMAL
+
+Invoice:
+
+> CIF BUSAN
+
+B/L:
+
+> Freight Collect
+
+사용자는 Incoterms와 운임 조건을 확인해야 한다.
+
+※ 실제 거래에서는 계약조건 및 서류 전체를 함께 확인해야 한다는 설명을 제공한다.
+
+---
+
+## CASE 003 — 수상한 Consignee
+
+난이도: HARD
+
+Invoice:
+
+> ABC BEAUTY INC.
+
+B/L:
+
+> XYZ BEAUTY LTD.
+
+사용자는 Invoice와 B/L의 거래 당사자 정보를 비교해야 한다.
+
+정답을 확인한 후
+
+> Consignee가 무엇인지
+
+> Shipper와 어떻게 다른지
+
+를 학습할 수 있도록 연결한다.
+
+---
+
+# 30. 최종 프로젝트 메시지
+
+이 프로젝트의 핵심은 단순한 **무역서류 퀴즈**가 아니다.
+
+> **"실제 무역업무에서 필요한 서류 검토 능력을 게임처럼 연습하는 인터랙티브 학습 대시보드"**
+
+를 만드는 것이다.
+
+따라서 디자인은 재미있지만 너무 게임처럼 보이지 않도록 하고,
+
+**실무적인 문서 + 깔끔한 데이터 대시보드 + 탐정 게임 요소**
+
+를 적절히 결합한다.
+
+---
+
+# 31. Claude Code / Vibe Coding 최종 구현 프롬프트
+
+다음 요구사항을 기반으로 Flask 웹 애플리케이션을 구현한다.
+
+프로젝트명은 **TRADE DOCUMENT DETECTIVE**이다.
+
+무역 초보자와 무역영어 학습자를 위한 게임형 무역서류 오류 탐지 대시보드를 제작한다.
+
+사용자는 가상의 수출입 사건을 선택하고 Purchase Order, Commercial Invoice, Packing List, B/L, Certificate of Origin 등의 서류를 확인한다.
+
+각 서류의 정보를 비교하여 수량, 금액, 중량, 거래당사자, 국가, 선적항, 날짜, Incoterms 등의 오류를 찾아내도록 한다.
+
+사용자가 오류가 의심되는 부분을 클릭하면 정답 여부를 판정하고, 정답이면 점수와 Combo를 제공한다.
+
+오답이면 바로 정답을 노출하지 말고 힌트를 제공한다.
+
+정답 확인 후에는 반드시 왜 오류인지와 관련된 무역 개념을 설명한다.
+
+사용자가 틀린 문제는 오답노트에 저장하고, 가장 많이 틀린 무역 개념을 통계로 보여준다.
+
+메인 화면에는 해결 사건 수, 정답률, Combo, 탐정 Level을 보여준다.
+
+난이도는 EASY / NORMAL / HARD / MASTER로 구성한다.
+
+디자인은 깔끔한 SaaS 대시보드 스타일을 사용한다.
+
+전체적으로 화이트와 밝은 회색을 기반으로 하고 Light Sky Blue를 메인 포인트 컬러로 사용한다. Pastel Yellow, Pastel Green, Soft Pink을 보조 포인트로 사용한다.
+
+카드형 UI, 부드러운 border-radius, 충분한 여백, 깔끔한 typography를 사용한다.
+
+정답 시 작은 confetti와 점수 상승 애니메이션을 적용한다.
+
+단, 전체 디자인은 어린이용 게임처럼 보이지 않고 실제 무역 실무 포트폴리오로 제출해도 될 정도로 세련되게 만든다.
+
+Backend는 Flask, Frontend는 HTML/CSS/JavaScript를 사용한다.
+
+초기 버전에서는 실제 API나 DB 없이 충분한 Mock Data로 모든 기능이 작동하도록 만든다.
+
+향후 SQLite 또는 PostgreSQL로 확장하기 쉽도록 데이터와 UI 로직을 분리한다.
+
+가장 중요한 것은 "문제를 푸는 것"보다 사용자가 실제로 무역서류를 비교하고 오류를 찾아보면서 무역 실무를 학습할 수 있도록 UX를 설계하는 것이다.
